@@ -14,7 +14,7 @@ async function main() {
     });
     console.log(tx.hash)
     await tx.wait();
-    setTimeout(main, 1000 * 3600)
+    setTimeout(main, 1000 * 300)
     console.log('waiting 3600 sec', Date.now())
 }
 
