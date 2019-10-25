@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  chainlink_bot:
+    image: bot
+    build: ./
+    restart: always
+    env_file: ./.env
+
+networks:
+  default:
+    external:
+      name: frontend_default
