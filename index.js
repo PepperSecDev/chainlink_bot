@@ -10,12 +10,12 @@ async function main() {
     let contractWithSigner = contract.connect(wallet);
 
     let tx = await contractWithSigner.requestEthereumPrice(ORACLE_CONTRACT, NODE_JOB_ID, {
-        gasPrice: ethers.utils.parseUnits('1.0', 'gwei'),
+        gasPrice: ethers.utils.parseUnits('3.0', 'gwei'),
     });
     console.log(tx.hash)
     await tx.wait();
-    setTimeout(main, 1000 * 300)
-    console.log('waiting 3600 sec', Date.now())
+    setTimeout(main, 1000 * Number(REQUEST_INTERVAL) * 60)
+    console.log(`waiting ${Number(REQUEST_INTERVAL)} min`, Date.now())
 }
 
 main()
