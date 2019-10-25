@@ -6,8 +6,3 @@ services:
     build: ./
     restart: always
     env_file: ./.env
-
-networks:
-  default:
-    external:
-      name: frontend_default
