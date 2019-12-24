@@ -65,6 +65,24 @@
 	},
 	{
 		"constant": false,
+		"inputs": [
+			{
+				"name": "_requestId",
+				"type": "bytes32"
+			},
+			{
+				"name": "_price",
+				"type": "uint256"
+			}
+		],
+		"name": "fulfillBTCPrice",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
 		"inputs": [],
 		"name": "renounceOwnership",
 		"outputs": [],
@@ -131,6 +149,24 @@
 		"constant": false,
 		"inputs": [
 			{
+				"name": "_oracle",
+				"type": "address"
+			},
+			{
+				"name": "_jobId",
+				"type": "string"
+			}
+		],
+		"name": "requestBTCPrice",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
 				"name": "_requestId",
 				"type": "bytes32"
 			},
@@ -166,6 +202,20 @@
 	{
 		"constant": true,
 		"inputs": [],
+		"name": "BTCcurrentPrice",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
 		"name": "lastMarket",
 		"outputs": [
 			{
@@ -175,6 +225,32 @@
 		],
 		"payable": false,
 		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_requestId",
+				"type": "bytes32"
+			},
+			{
+				"name": "_payment",
+				"type": "uint256"
+			},
+			{
+				"name": "_callbackFunctionId",
+				"type": "bytes4"
+			},
+			{
+				"name": "_expiration",
+				"type": "uint256"
+			}
+		],
+		"name": "cancelRequest",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
